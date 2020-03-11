@@ -345,7 +345,10 @@ export class Multiselect extends React.Component {
             checked={this.isSelectedValue(option)}
           />
         )}
-        {isObject ? option[displayValue] : (option || '').toString()}
+        <span className={`checkMark`}/>
+        <label className={`checkboxLabel`}>        
+          {isObject ? option[displayValue] : (option || '').toString()}
+        </label>
       </li>
     ));
   }
