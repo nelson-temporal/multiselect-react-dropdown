@@ -310,14 +310,19 @@ export class Multiselect extends React.Component {
 							onClick={() => this.onSelectItem(option)}
 						>
 							{showCheckbox && !singleSelect && (
-								<input
-									type="checkbox"
-                  className={ms.checkbox}
-                  readOnly
-									checked={this.isSelectedValue(option)}
-								/>
+                <React.Fragment>
+  								<input
+  									type="checkbox"
+                    className={ms.checkbox}
+                    readOnly
+  									checked={this.isSelectedValue(option)}
+  								/>
+                  <span className={`checkMark`}/>
+                </React.Fragment>
 							)}
-							{isObject ? option[displayValue] : (option || '').toString()}
+              <label className={`checkboxLabel`}>   
+							 {isObject ? option[displayValue] : (option || '').toString()}
+              </label>
 						</li>
 					))}
 				</React.Fragment>
@@ -338,14 +343,16 @@ export class Multiselect extends React.Component {
         onClick={() => this.onSelectItem(option)}
       >
         {showCheckbox && !singleSelect && (
-          <input
-            type="checkbox"
-            readOnly
-            className={`checkbox ${ms.checkbox}`}
-            checked={this.isSelectedValue(option)}
-          />
-        )}
-        <span className={`checkMark`}/>
+          <React.Fragment>
+            <input
+              type="checkbox"
+              readOnly
+              className={`checkbox ${ms.checkbox}`}
+              checked={this.isSelectedValue(option)}
+            />
+            <span className={`checkMark`}/>
+          </React.Fragment>
+        )}        
         <label className={`checkboxLabel`}>        
           {isObject ? option[displayValue] : (option || '').toString()}
         </label>
