@@ -60,3 +60,4 @@
 .icon_cancel_circled2:before { content: '\e802'; } /* '' */
 .icon_down_dir:before { content: '\e803'; } /* '' */
 .icon_window_close:before { content: '\f2d3'; } /* '' */
+.icon_cross_cancel:before { content: 'x'; } /* '' */

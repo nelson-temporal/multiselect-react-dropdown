@@ -6,7 +6,8 @@ const closeIconTypes = {
   circle: 'icon_cancel_circled',
   circle2: 'icon_cancel_circled2',
   close: 'icon_window_close',
-  cancel: 'icon_cancel'
+  cancel: 'icon_cancel',
+  cross: 'icon_cross_cancel'
 };
 
 export class Multiselect extends React.Component {
